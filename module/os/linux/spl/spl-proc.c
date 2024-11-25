@@ -358,12 +358,10 @@ static struct ctl_table spl_kmem_table[] = {
 		.extra2		= &table_max,
 		.mode		= 0444,
 		.proc_handler	= &proc_doslab,
-	},
-	{},
+	}
 };
 
 static struct ctl_table spl_kstat_table[] = {
-	{},
 };
 
 static struct ctl_table spl_table[] = {
@@ -397,7 +395,6 @@ static struct ctl_table spl_table[] = {
 		.child		= spl_kstat_table,
 	},
 #endif
-	{},
 };
 
 #ifdef HAVE_REGISTER_SYSCTL_TABLE
@@ -407,7 +404,6 @@ static struct ctl_table spl_dir[] = {
 		.mode		= 0555,
 		.child		= spl_table,
 	},
-	{}
 };
 
 static struct ctl_table spl_root[] = {
@@ -416,7 +412,6 @@ static struct ctl_table spl_root[] = {
 		.mode		= 0555,
 		.child		= spl_dir,
 	},
-	{}
 };
 #endif
 
